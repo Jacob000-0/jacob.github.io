@@ -1,0 +1,18 @@
+# Copyright
+
+
+
+# name
+name: build
+# on condition 触发条件
+on: 
+  push:
+    branches:
+      - main
+
+# environment
+env:
+  PYTHON_VERSION: 3.x
+# permission
+permissions:
+  contents: read
