@@ -11,8 +11,8 @@ on:
       - main
 
 # environment
-env:
-  PYTHON_VERSION: 3.x
+#env:
+  #PYTHON_VERSION: 3.x
 # permission
 permissions:
   contents: read
