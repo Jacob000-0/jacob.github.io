@@ -1,1 +1,9 @@
 # Copyright
+name: build
+
+on:
+  push:
+    branches: [ main ]
+
+permissions:
+  contents: write
