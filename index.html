@@ -1,52 +1,76 @@
+<!--
+ * @Author: Jacob 1126137157@qq.com
+ * @Date: 2025-11-28 15:56:09
+ * @LastEditors: Jacob 1126137157@qq.com
+ * @LastEditTime: 2025-11-28 18:07:25
+ * @FilePath: \blog\index.html
+ * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- ... -->
-    <meta name="description" content="Yangcong's Blog - Smart Power Gird Researcher & Engineer">
+    <meta name="description" content="Yangcong's Blog - Smart Power Grid Researcher & Engineer">
     <meta name="author" content="Yangcong">
     <title>Yangcong's Blog</title>
     <!-- Favicon -->
     <link rel="icon" sizes="any" type="image/svg+xml" href="https://img.icons8.com/color/48/000000/home--v1.png">
-    <!-- 样式  -->
+    <!-- 样式 -->
     <link rel="stylesheet" href="static/css/index.css">
 </head>
 
 <body>
     <div id="home-container">
-        <!-- 导航栏 右上方 -->
-     <div id="blog-nav-bar">
-        <nav>
-            <!-- <ul>
-                <li><a href="/">Home</a></li>
-                <li><a href="/about">About</a></li>
-                <li><a href="/blog">Blog</a></li>
-                <li><a href="/contact">Contact</a></li>
-            </ul> -->
-            <div class="nav-brand-logo">
-                <span class="brand-logo" aria-label="Yangcong Logo">
-                    <img src="https://img.icons8.com/?size=100&id=5eVy1OUxmmLB&format=png&color=000000" alt="Yangcong">
-                </span>
-                <span class="brand-name">Yangcong's Blog</span>
-            </div>
-            <!-- 菜单 -->
-             <div class="nav-menu">
-                <a href="#home">Home</a>
-                <a href="#Blog">Blog</a>
-                <a href="#About">About</a>
-                <a href="#Contact">Contact</a>
-             </div>
-        </nav>
-     </div>
+        
+        <!-- 导航栏 -->
+        <header id="blog-nav-bar">
+            <nav class="nav-container">
+                <div class="nav-brand">
+                    <a href="/" aria-label="Home">
+                        <img class="brand-logo" src="https://img.icons8.com/?size=100&id=5eVy1OUxmmLB&format=png&color=000000" alt="Yangcong Logo">
+                        <span class="brand-name">Yangcong's Blog</span>
+                    </a>
+                </div>
+                <!-- 菜单 -->
+                <div class="nav-menu">
+                    <a href="#home" class="nav-link">Home</a>
+                    <a href="#blog" class="nav-link">Blog</a>
+                    <a href="#about" class="nav-link">About</a>
+                    <a href="#contact" class="nav-link">Contact</a>
+                </div>
+            </nav>
+        </header>
 
-     <!-- 底部 脚底 -->
-      <div id="index_footer">
-        <footer>
-            <p>&copy; 2025 <a href="http://yangcong33.qzz.io/" target="_blank">Yangcong's Blog</a> All rights reserved.</p>
-            powered by <a href="https://github.com/">Github</a>
+        <!-- 个人简介 (Hero Section) -->
+        <section id="hero-section">
+            <h1>Hello, I'm Yangcong.</h1>
+            <p class="subtitle">Smart Power Grid Researcher & Engineer</p>
+            <p class="intro-text">
+                Welcome to my digital garden. Here I share my thoughts on electrical engineering, 
+                coding, and life.
+            </p>
+        </section>
+
+        <!-- 文章列表区域 -->
+        <main id="blog-posts-container">
+            <h2 class="section-title">Latest Posts</h2>
+            <!-- JS 将会自动在这里填充文章 -->
+            <div id="post-list">
+                <!-- Loading 占位符 -->
+                <p style="text-align:center; color:#999;">Loading posts...</p>
+            </div>
+        </main>
+
+        <!-- 底部 -->
+        <footer id="index_footer">
+            <p>&copy; <span id="year">2025</span> <a href="http://yangcong33.qzz.io/" target="_blank">Yangcong's Blog</a>. All rights reserved.</p>
+            <p class="tiny-text">Powered by <a href="https://github.com/" target="_blank">Github</a></p>
         </footer>
-      </div>
+    
     </div>
+
+    <!-- 引入 JS -->
+    <script src="static/js/main.js"></script>
 </body>
 </html>
