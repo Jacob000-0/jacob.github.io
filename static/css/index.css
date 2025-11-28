@@ -1,0 +1,63 @@
+/*This is the CSS code for the blog index page.*/
+
+/* body styles */
+body {
+    background-color: #f2f2f2;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+    color: #333333;
+}
+/* 本页面中所有的链接 */
+a {
+    text-decoration: none;
+}
+a:hover {
+    /* text-decoration: underline; */
+    color: #9933ff;
+}
+/* 区别鼠标和 键盘操作 */
+a:focus-visible {
+    outline: 2px solid #440385;
+    outline-offset: 2px;
+}
+/* 主页整个大容器div */
+#home-container {
+    border: 1px solid red;
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+/* nav bar styles */
+#blog-nav-bar {
+    color: #9933ff;
+}
+
+.brand-logo {
+    width: 24px;
+    height: 24px;
+    vertical-align: middle;
+    /* margin-right: 8px; */
+}
+
+/* footer styles */
+#index_footer {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #e6e6e6;
+}
+/* a link */
+#index_footer footer a {
+    color: #333333; 
+    text-decoration: none;
+    /* font-size: 66px; */
+}
+/* a link hover */
+#index_footer footer a:hover {
+    color: #9933ff;
+    text-decoration: underline;
+}
