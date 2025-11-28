@@ -1,0 +1,46 @@
+name: Sync docs to root
+
+on:
+  push:
+    branches: [ main ]
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    # 防止机器人提交触发自身循环
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout main
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Configure git
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+      - name: Copy docs to root
+        run: |
+          # 清除根工作区中除 .git 外的文件（小心：如果你想保留某些文件，请调整此处的删除/排除策略）
+          shopt -s extglob
+          rm -rf !( .git )
+          # 将 docs 内容复制到根目录
+          cp -a docs/. ./
+          # 如果你希望保留 .github 或其他目录，请改用 rsync 排除这些目录
+          # rsync -av --exclude='.git' --exclude='.github' docs/ ./
+
+      - name: Commit & push if changed
+        run: |
+          git add -A
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
+            exit 0
+          fi
+          git commit -m "Sync docs -> root (automated) [ci skip]"
+          git push origin main
